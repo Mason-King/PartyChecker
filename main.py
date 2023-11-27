@@ -4,10 +4,10 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-credentials = ServiceAccountCredentials.from_json_keyfile_name(r'PATH', scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name(r'party-checker-2dd96bd51289.json', scope)
 
 client = gspread.authorize(credentials)
-sheet_url = 'LINK'
+sheet_url = 'https://docs.google.com/spreadsheets/d/1cuUC00cy8Lf42c9CaMw-MsraMXZEN8timPpGzlOnu5c/edit#gid=1499291877'
 sheet = client.open_by_url(sheet_url)
 
 worksheet = sheet.worksheet('Form Responses 1') 
